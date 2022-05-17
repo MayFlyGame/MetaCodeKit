@@ -1,9 +1,12 @@
 <idea-plugin>
-    <id>com.mayflygame.MetaSourceKit</id>
-    <name>MetaSourceKit</name>
-    <vendor email="mayflygame@foxmail.com" url="http://www.mayflygame.com">MayflyGame</vendor>
+    <id>com.mayflygame.MetaCodeKit</id>
+    <name>Plugin display name here</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
 
-    <description>MetaSourceKit - Generate source automatically!</description>
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->

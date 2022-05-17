@@ -1,6 +1,5 @@
 plugins {
     id 'org.jetbrains.intellij' version '1.5.3'
-    id 'org.jetbrains.kotlin.jvm' version '1.5.10'
     id 'java'
 }
 
@@ -8,14 +7,12 @@ group 'com.mayflygame'
 version '1.0-SNAPSHOT'
 
 repositories {
-    mavenLocal()
     mavenCentral()
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib"
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
