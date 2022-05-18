@@ -1,9 +1,12 @@
 <idea-plugin>
     <id>com.mayflygame.MetaCodeKit</id>
-    <name>MetaCodeKit</name>
-    <vendor email="mayflygam@foxmail.com" url="http://www.mayflygame.com">MayflyGame</vendor>
+    <name>Plugin display name here</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
 
-    <description>This is MetaCodeKit by MayflyGame! 2022-05</description>
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
@@ -15,8 +18,8 @@
 
     <actions>
         <!-- Add your actions here -->
-        <action id="com.mayflygame.metacodekit.action.HelloAction" class="com.mayflygame.metacodekit.action.HelloAction"
-                text="Hello Action" description="HelloAction Say Hello">
+        <action id="com.mayflygame.metacodekit.HelloAction" class="com.mayflygame.metacodekit.HelloAction"
+                text="Hello Action" description="Hello Action Say Hello">
             <add-to-group group-id="GenerateGroup" anchor="last"/>
         </action>
     </actions>
