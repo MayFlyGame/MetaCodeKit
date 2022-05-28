@@ -1,29 +1,38 @@
 plugins {
-    id 'org.jetbrains.intellij' version '1.5.3'
     id 'java'
+    id 'org.jetbrains.intellij' version '1.5.3'
+    id "org.jetbrains.kotlin.jvm" version "1.3.41"
 }
 
 group 'com.mayflygame'
 version '1.0-SNAPSHOT'
 
+sourceCompatibility = 11
+targetCompatibility = 11
+
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    testCompile("io.kotlintest:kotlintest-runner-junit5:3.3.2")
+    testCompile "io.mockk:mockk:1.9.3"
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
     version = '2021.3.2'
+    pluginName = 'MetaCodeKit'
+    updateSinceUntilBuild = false
+    plugins = ["org.intellij.scala:2021.3.22", 'java']
 }
+
 patchPluginXml {
-    changeNotes = """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+    changeNotes = """MayflyGame MetaCodeKit"""
 }
-test {
-    useJUnitPlatform()
-}
+
