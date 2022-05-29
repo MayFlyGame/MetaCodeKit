@@ -1,36 +1,26 @@
 <idea-plugin>
     <id>com.mayflygame.MetaCodeKit</id>
-    <name>MayflyGame MetaCodeKit</name>
-    <vendor email="mayflygame@foxmail.com" url="http://www.mayflygame.com">MayflyGame</vendor>
+    <name>Plugin display name here</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
 
-    <description>MetaCodeKit - Use template to write code.</description>
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
 
-    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
-    <!--<depends>com.intellij.modules.platform</depends>-->
-    <depends>com.intellij.modules.java</depends>
-    <depends optional="true" config-file="">org.intellij.scala</depends>
+    <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
-        <applicationService serviceInterface="com.mayflygame.metacodekit.MetaCodeKitSettings"
-                            serviceImplementation="com.mayflygame.metacodekit.MetaCodeKitSettings"/>
-
-        <applicationConfigurable instance="com.mayflygame.metacodekit.ui.MetaCodeKitConfigurable"/>
     </extensions>
 
     <actions>
         <!-- Add your actions here -->
-        <group id="com.mayflygame.metacodekit.action.MetaCodeKitMenu"
-               class="com.mayflygame.metacodekit.action.MetaCodeKitGroup" text="MetaCodeKit"
-               description="MetaCodeKit actions" popup="true">
-            <add-to-group group-id="GenerateGroup" anchor="after" relative-to-action="JavaGenerateGroup2"/>
-        </group>
+        <action id="com.mayflygame.metacodekit.HelloAction" class="com.mayflygame.metacodekit.HelloAction"
+                text="Hello Action" description="Hello Action Say Hello">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+        </action>
     </actions>
-
-    <application-components>
-        <component>
-            <implementation-class>com.mayflygame.metacodekit.MetaCodeKit</implementation-class>
-        </component>
-    </application-components>
 </idea-plugin>
