@@ -1,0 +1,3 @@
+<idea-plugin>
+    <depends>org.intellij.scala</depends>
+</idea-plugin>
