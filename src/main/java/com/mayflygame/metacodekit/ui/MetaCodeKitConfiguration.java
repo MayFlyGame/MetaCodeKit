@@ -22,7 +22,7 @@ import static com.mayflygame.metacodekit.ui.UiTools.with;
  */
 public class MetaCodeKitConfiguration {
     private JPanel                        mainPane;
-    private JBTabbedPane                  tabbedPane;
+    private JTabbedPane                   tabbedPane;
     private Map<String, TemplateEditPane> editPaneMap = new ConcurrentHashMap<>();
     private Map<Integer, String>          keyByIndex  = new ConcurrentHashMap<>();
     private Map<String, CodeTemplate>     codeTemplates;
